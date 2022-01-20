@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="heart.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h2 class="head">love calculator</h2><br>
+<form action="##" onsubmit="return validation()">
+
+<div class="container">
+<center>
+<input type="text" class="fname" id="fname" placeholder="enter your name" autocomplete="off">
+<br>
+<span id="s1" class="span"></span>
+<br>
+<span id="main" class="span2"></span>
+<br>
+<input type="text" class="lname" id="lname" placeholder="enter your bf / gf name" autocomplete="off">
+<br>
+<span id="s2" class="span1"></span>
+<br>
+<input type="submit" class="btn" value="love">
+</center>
+</div>
+<div class="div2" id="div">
+	<br>
+<p> CEO:syed talib<br>study:bsc.IT<br>
+passion:web developing</p>	
+
+</div>
+</form>
+<script type="text/javascript">
+function validation(){
+
+
+	                var name1=document.getElementById('fname').value;
+	                var name2=document.getElementById('lname').value;
+	                if(name1=="")
+
+	                {
+	                	   document.getElementById('s1').innerHTML="*please fill up your name";
+	                	   return false;
+	                }
+	                
+	               
+                    if(!isNaN(name1))
+                    {
+
+                    	 document.getElementById('s1').innerHTML="*please enter valid name";
+                    	 return false;
+                    }
+                   
+                    
+                    if((name1.length<3)||(name1.length>20))
+                    {
+                    	 document.getElementById('s1').innerHTML="*name must be equal to 3 letters or greater";
+                    	 return false;
+                    }
+                    
+                    
+                     if(name2=="")
+
+	                {
+	                	   document.getElementById('s2').innerHTML="*please fill up your name";
+	                	   return false;
+	                }
+	               
+                    if(!isNaN(name2))
+                    {
+
+                    	 document.getElementById('s2').innerHTML="*please enter valid name";
+                    	 return false;
+                    }
+                    
+                    if((name2.length<3)||(name2.length>20))
+                    {
+                    	 document.getElementById('s2').innerHTML="*name must be equal to 3 letters or greater";
+                    	 return false;
+                    }
+                   
+                    if(name1!="" && name2!="")
+                    {
+                    	 document.getElementById('main').innerHTML=Math.floor(Math.random()*100)+"%";
+
+                    	 return false;
+                    }
+
+
+                   
+                    
+
+}
+
+
+
+</script>
+
+</body>
+</html>
